@@ -1,0 +1,54 @@
+#!/bin/bash
+
+rm -f \
+    20181212_2IDmMqZFUJE.info.json.vo.* \
+    20181212_2IDmMqZFUJE.info.json.ao.* \
+    20181212_2IDmMqZFUJE.info.json.bo.* \
+    20181212_2IDmMqZFUJE.info.json.wav 
+
+rm -fr               20181212_2IDmMqZFUJE.info_dir
+mkdir -p             20181212_2IDmMqZFUJE.info_dir
+mv 20181212_2IDmMqZFUJE.info.json 20181212_2IDmMqZFUJE.info.json.*         20181212_2IDmMqZFUJE.info_dir/
+
+
+
+mv  20181212_2IDmMqZFUJE.info_dir/20181212_2IDmMqZFUJE.info.json.jpg 20181212_2IDmMqZFUJE.info_dir/20181212_2IDmMqZFUJE.info.json.webm.mp4.jpg
+
+cat > 20181212_2IDmMqZFUJE.info_dir/_index.md << EOF3
++++
+title = " 20181212_2IDmMqZFUJE VOA时事大家谈 | 北京抓人示警美国 贸易谈判成败难料？2018-12-12 "
+description = " VOA主持人：许波  嘉宾：吴强 秦伟平_中国华为公司财务长孟晚舟在加拿大被捕，可能（确定将）被引渡到美国受审，连日来在中国民间引发高涨的反美声浪。纽约时报报道称，中国领导人习近平被内外夹攻，既要稳定中美关系，又要镇住军方和保守民族主义势力的不满，面临严峻考验。救不救孟晚舟，怎么救？与美国谈不谈，怎么谈？北京要如何在两难中寻求平衡？孟晚舟事件是否让习近平的权威大打折扣？ "
+weight = 20
++++
+
+{{< mymp4 mp4="20181212_2IDmMqZFUJE.info.json.webm.mp4" 
+text="len $(cat 20181212_2IDmMqZFUJE.info_dir/20181212_2IDmMqZFUJE.info.json.webm.mp4|wc -c)"
+>}}
+
+{{< mymp4x  mp4x="20181212_2IDmMqZFUJE.info.json.25k.mp4"
+text="len $(cat 20181212_2IDmMqZFUJE.info_dir/20181212_2IDmMqZFUJE.info.json.25k.mp4|wc -c)"
+>}}
+
+
+{{< mydiv text="VOA主持人：许波  嘉宾：吴强 秦伟平_中国华为公司财务长孟晚舟在加拿大被捕，可能（确定将）被引渡到美国受审，连日来在中国民间引发高涨的反美声浪。纽约时报报道称，中国领导人习近平被内外夹攻，既要稳定中美关系，又要镇住军方和保守民族主义势力的不满，面临严峻考验。救不救孟晚舟，怎么救？与美国谈不谈，怎么谈？北京要如何在两难中寻求平衡？孟晚舟事件是否让习近平的权威大打折扣？" >}}
+<br>
+
+{{< mydiv text="https://www.youtube.com/watch?v=2IDmMqZFUJE" >}}
+
+
+<br>
+
+请大家传播时，不需要传播文件本身，<br>
+原因是：一旦传播过大东西（例如，图片，文件），<br>
+就会触发检查机制。<br>
+我不知道检查机制的触发条件。<br>
+但是我知道，不会说你传一个没有敏感词的网络地址都检查，<br>
+否则，检查员得累死。<br><br>
+直接转发网址就可以了：<br>
+原因是，这是程序员网站，<br>
+共匪不敢封锁，墙内可以直接下载。
+
+
+EOF3
+
+
